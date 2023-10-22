@@ -10,7 +10,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: url('2370.jpg') no-repeat;
+	background: url('background.jpg') no-repeat;
 	background-size: cover;
 	background-position: center;
 }
@@ -60,41 +60,76 @@ body{
 	width: 100%; 
 }
 
-.toggle-button{
-	position: absolute;
-	top: .75rem;
-	right: 1rem;
-	display: none;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 30px;
-	height: 21px;
-}
+@media(max-width:850px){
 
-.toggle-button .bar{
-	height: 3px;
-	width: 100%;
-	background-color: white;
-	border-radius: 10px;
-}
-
-@media(max-width: 500px){
-
-	.toggle-button{
-	 display: flex;
+	body{
+		display: flex;
+		/* justify-content: center; */
+		/* align-items: center; */
+		min-height: 100vh;
+		background: url('../register/background.jpg') no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
-	.navbar{
-		display: none;
-		width: 100%;
-	}
+	
 	.header{
+		top: 0;
+		/* left: 0; */
+		width: 100%;
+		padding: 20px 100px ;
+		background: transparent;
+		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		z-index: 100; /* Layout z-axis order */
+	}
+
+	.header .logo{
+		font-size: 32px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 700;
+		text-align: center;
+		width: 100vh;
+		padding-bottom: 20px;
+	}
+
+	.navbar {
+		font-size: 18px;
+		color: #fff;
+		font-weight: 500;
+		text-decoration: none;
+		width: 100%;
+		/* margin-left: 40px; */
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.navbar a{
+		font-size: 18px;
+		color: #fff;
+		font-weight: 500;
+		text-decoration: none;
+		display: flex;
+		justify-content: space-between;
+		margin-left: 0px;
+	}
+}
+
+@media(max-width: 550px){
+	.navbar {
+		font-size: 18px;
+		color: #fff;
+		font-weight: 500;
+		text-decoration: none;
 		width: 100%;
-		flex: 100%;
+		/* margin-left: 40px; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.navbar a{
+		margin-top: 20px;
 	}
 }
 
@@ -196,4 +231,10 @@ body{
 
 .register-link p a:hover{
 	text-decoration: underline;
+}
+
+@media(max-width: 550px){
+	.wrapper{
+		margin-top: 60px;
+	}
 }
