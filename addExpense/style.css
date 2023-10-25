@@ -1,0 +1,153 @@
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAVBAR  */
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px ;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+	background-color: #7C73C0;
+}
+
+.header .logo{
+	font-size: 32px;
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.bars{
+	display: none;
+}
+
+.dropdown{
+		display: flex;
+		justify-content: space-between;
+}
+
+.dropdown li{
+	margin-left: 40px;
+}
+
+.dropdown a{
+	position: relative;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 500;
+}
+
+.dropdown a::before{
+	content: '';
+	position: absolute;
+	top:100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: 0.5s;
+}
+
+.dropdown a:hover::before{
+	width: 100%; 
+}
+
+@media(max-width: 1100px){
+
+	.navbar {
+		display: inline-block;
+		gap: 1em;
+		font-size: 18px;
+		position: relative;
+	}
+
+	.dropdown{
+		background-color: #7C73C0;
+		background-size: cover;
+		padding: 1em 0;
+		position: absolute;
+		right: -2px;
+		display: none;
+		border-radius: 8px;
+		top: 30px;
+	}
+	
+	.bars{
+		display: flex;
+		justify-content: end;
+	}
+
+	.bars a{
+		position: relative;
+		color: #fff;
+		font-size: 25px;
+	}
+
+	.navbar li{
+		padding: 5px 14px;
+	}
+
+	.dropdown li + li {
+		margin-top: 0px;
+	}
+	
+	.dropdown li {
+		margin-left: 0px;
+		margin-top: 10px; 
+		width: 8em;
+		text-align: end;
+	}
+	
+	.dropdown li:hover {
+		background-color: #4c9e9e;
+	}
+	
+	.menu:hover .dropdown {
+		display: block;
+	}
+}
+
+@media(max-width: 575px){
+	header{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 100;
+		background-color: #7C73C0;
+	}
+
+	.navbar li{
+		padding: 5px 14px;
+	}
+
+	.dropdown li {
+		text-align: center;
+	}
+
+}
