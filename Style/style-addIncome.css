@@ -1,0 +1,253 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body{
+	width: 100%;
+	background-color: white;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+
+.radio input{
+	accent-color: grey; 
+}
+
+/* Header */
+
+header{
+	width: 100%;
+}
+
+.logo-section{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 80px;
+	background-color: antiquewhite;
+	border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar{
+	border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.navbar ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 90px;
+	padding: 20px 100px;
+	background-color: rgb(190, 190, 190);
+}
+
+.navbar a{
+	color: black;
+	font-size: 20px;
+	position: relative;
+	margin-left: 20px;
+}
+
+.navbar a::before{
+	content: '';
+	position: absolute;
+	top:100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: black;
+	transition: 0.5s;
+}
+
+.navbar a:hover::before{
+	width: 100%; 
+}
+
+/* main */ 
+
+.container-add-income{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.field{
+	height: 700px;
+	background-color: antiquewhite;
+	border: 2px solid black;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 450px;
+}
+
+.title{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	position: relative;
+	top: 5px;
+	margin-bottom: 5px;
+}
+
+.title h2{
+	position: relative;
+	top: 25px;
+	font-size: 30px;
+}
+
+.amount{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.input-box input{
+	width: 300px;
+	height: 30px;
+	border-radius: 15px;
+	border: 2px solid black;
+	padding: 20px 45px 20px 20px;
+}
+
+.input-box i {
+	font-size: 20px;
+	position: absolute;
+	right: 110px;
+	top: 30px;
+}
+
+.date{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+
+.category{
+	width: 100%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 10px;
+}
+
+.category .category-title{
+	width: 100%;
+	position: relative;
+	left: 90px;
+}
+
+.category .radio{
+	position: relative;
+	top: 0px;
+	left: 90px;
+}
+
+.comment{
+	width: 90%;
+	height: 150px;
+}
+
+.comment input{
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}
+
+.comment input::placeholder{
+	font-size: 15px;
+	text-align: center;
+}
+
+.button{
+	width: 100%;
+	height:  145px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button button{
+	width: 150px;
+	height: 40px;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.button button a{
+color: black;
+}
+
+.button button:hover{
+	font-size: 19px;
+	background-color: gainsboro;
+	cursor: pointer;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+	background: transparent;
+	bottom: 0;
+	color: transparent;
+	cursor: pointer;
+	height: auto;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+}
+
+@media(max-width: 1200px){
+	.navbar ul{
+		gap: 40px;
+	}
+}
+
+@media(max-width: 900px){
+	.navbar ul{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+
+@media(max-width: 600px){
+	.logo-section{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		padding: 20px 80px;
+		background-color: antiquewhite;
+		border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+	}
+}

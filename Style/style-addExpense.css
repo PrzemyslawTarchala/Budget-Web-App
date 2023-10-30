@@ -1,0 +1,296 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body{
+	width: 100%;
+	background-color: white;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+
+.radio input{
+	accent-color: grey; 
+}
+
+/* Header */
+
+header{
+	width: 100%;
+}
+
+.logo-section{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 80px;
+	background-color: antiquewhite;
+	border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar{
+	border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.navbar ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 90px;
+	padding: 20px 100px;
+	background-color: rgb(190, 190, 190);
+}
+
+.navbar a{
+	color: black;
+	font-size: 20px;
+	position: relative;
+	margin-left: 20px;
+}
+
+.navbar a::before{
+	content: '';
+	position: absolute;
+	top:100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: black;
+	transition: 0.5s;
+}
+
+.navbar a:hover::before{
+	width: 100%; 
+}
+
+/* main */ 
+
+.container-add-expense{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.field{
+	width: 50%;
+	background-color: antiquewhite;
+	border: 2px solid black;
+	border-radius: 10px;
+	min-width: 800px;
+}
+
+.title{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 15px;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+.title h2{
+	position: relative;
+	font-size: 30px;
+}
+
+.user-inputs{
+	width: 100%;
+	padding: 20px 0px;
+}
+
+.amount-date{
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+.input-box input{
+	width: 300px;
+	height: 30px;
+	border-radius: 15px;
+	border: 2px solid black;
+	padding: 20px 45px 20px 20px;
+}
+
+.input-box i {
+	font-size: 20px;
+	position: relative;
+	top: 5px;
+	right: 45px;
+}
+
+.payment{
+	padding: 40px 0px;
+	display: flex;
+	justify-content: center;
+	gap: 58px;
+}
+
+.category{
+	width: 100%;
+	height: 60%;
+}
+
+.category-title{
+	text-align: center;
+}
+
+.choose{
+	padding: 20px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 70px;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.comment{
+	margin-top: 15px;
+	width: 90%;
+	height: 150px;
+	margin-left: 45px;
+}
+
+.comment input{
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}
+
+
+.comment input::placeholder{
+	font-size: 15px;
+	text-align: center;
+}
+
+.button{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button button{
+	width: 150px;
+	height: 40px;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.button button a{
+	color: black;
+}
+
+.button button:hover{
+	font-size: 19px;
+	background-color: gainsboro;
+	cursor: pointer;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+	background: transparent;
+	color: transparent;
+	width: 66%;
+	-webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-appearance{
+	width: 15px;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 10px;
+}
+
+@media(max-width: 1200px){
+
+	.navbar ul{
+		gap: 40px;
+	}
+}
+
+@media(max-width: 900px){
+	
+	.navbar ul{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.field{
+		width: 50%;
+		background-color: antiquewhite;
+		border: 2px solid black;
+		border-radius: 10px;
+		min-width: 400px;
+	}
+
+	.amount-date{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+	}
+
+	.payment{
+		padding: 40px 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.choose{
+		padding: 20px 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.comment{
+		margin-left: 20px;
+	}
+}
+
+
+@media(max-width: 600px){
+	.logo-section{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		padding: 20px 80px;
+		background-color: antiquewhite;
+		border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+	}
+}

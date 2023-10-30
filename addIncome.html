@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Add Income</title>
+		<link rel="stylesheet" href="./Style/style-addIncome.css">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo-section">
+				<div class="logo">
+					<img src="./Image/logo.png" alt="savings" width="64px" height="64px">
+					<h2> Fix your wallet</h2>
+				</div>
+				<div class="user">
+					<h3>Welcome: XYZ</h3>
+				</div>
+			</div>
+			<nav class="navbar">
+				<ul>
+					<li><a href="./home.html">Home</a></li>
+					<li><a href="./addExpense.html">Add Expense</a></li>
+					<li><a href="./balance.html">Balance</a></li>
+					<li><a href="./settings.html">Settings</a></li>
+					<li><a href="./home.html">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="container-add-income">
+				<div class="field">
+					<div class="title">
+						<h2>Add Income</h2>
+					</div>
+					<div class="amount input-box">
+						<input type="text" placeholder="Amount" required>
+						<i class='bx bx-dollar' ></i>
+					</div>
+					<div class="date input-box">
+						<input type="date" placeholder="DD-MM-RRRR" required>
+						<i class='bx bx-calendar' ></i>
+					</div>
+					<div class="category">
+						<div class="category-title">
+							<h3>Choose category:</h3>
+						</div>
+						<div class="radio">
+							<input type="radio" id="salary" name="category" value="1">
+							<label for="salary">Salary</label>
+						</div>
+						<div class="radio">
+							<input type="radio" id="bankInterset" name="category" value="2">
+							<label for="bankInterset">Bank Interst</label>
+						</div>
+						<div class="radio">
+							<input type="radio" id="sales" name="category" value="3">
+							<label for="sales">Sales</label>
+						</div>
+						<div class="radio">
+							<input type="radio" id="other" name="category" value="4">
+							<label for="other">Other</label>
+						</div>
+					</div>
+					<div class="comment">
+						<input type="text" placeholder="Additional comment">
+					</div>
+					<div class="button">
+						<button type="submit"><a href="./home.html">Submit</a></button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+	</body>
+</html>
