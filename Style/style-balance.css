@@ -7,7 +7,7 @@
 
 body{
 	width: 100%;
-	background-color: antiquewhite;
+	background-color: white;
 }
 
 a{
@@ -18,18 +18,23 @@ li{
 	list-style: none;
 }
 
+.radio input{
+	accent-color: grey; 
+}
+
 /* Header */
 
 header{
-
+	width: 100%;
 }
 
-.upper-section{
+.logo-section{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 80px;
-	background-color: white;
+	background-color: antiquewhite;
+	border-bottom: 2px solid rgb(0, 0, 0, 0.5);
 }
 
 .logo{
@@ -38,47 +43,109 @@ header{
 	align-items: center;
 }
 
+.navbar{
+	border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+}
+
 .navbar ul{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 90px;
 	padding: 20px 100px;
-	background-color: grey;
+	background-color: rgb(190, 190, 190);
 }
 
 .navbar a{
-	color: white;
+	color: black;
 	font-size: 20px;
+	position: relative;
+	margin-left: 20px;
 }
 
+.navbar a::before{
+	content: '';
+	position: absolute;
+	top:100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: black;
+	transition: 0.5s;
+}
+
+.navbar a:hover::before{
+	width: 100%; 
+}
 /* Main */
 
-.period{
+.field-choose-period{
+	margin-top: 10px;
 	width: 100%;
 	height: 100px;
 	background-color: aquamarine;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 100px;
 }
 
-.balance{
+.income-expanse-table{
 	width: 100%;
-	height: 800px;
-	margin-top: 20px;
+	margin-top: 50px;
 	display: flex;
+	gap: 50px;
 	justify-content: center;
 }
 
-.table-field{
-	width: 70%;
-	height: 100%;
-	background-color: white;
+table{
+	background: antiquewhite;
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+	border-radius: 20px 12px 0 0;
+	overflow: hidden;
 }
 
-th, td {
-  padding: 15px;
-  text-align: center;
+table th{
+	width: 100px;
+	height: 30px;
+}
+
+table td{
+	border: 1px solid black;
+}
+
+table td, td{
+	width: 100px;
+	height: 30px;
+}
+
+th,td{
+	padding: 12px 30px;
+}
+
+.income tr th{
+	background: rgb(127, 226, 127);
+}
+
+.income td{
+	background: rgb(201, 253, 201);
+}
+
+.expense tr th{
+	background: rgb(224, 48, 48);
+}
+
+.expense td{
+	background: rgb(255, 202, 202);
+}
+
+.sumarry{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 80px;
+}
+
+.sumarry p{
+	
 }
