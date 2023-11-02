@@ -214,17 +214,11 @@ header{
 
 input[type="date"]::-webkit-calendar-picker-indicator {
 	cursor: pointer;
-	background: transparent;
-	color: transparent;
-	width: 66%;
-	-webkit-appearance: none;
-}
-
-input[type="date"]::-webkit-appearance{
-	width: 15px;
 	padding: 0px;
-	margin: 0px;
-	margin-top: 10px;
+	position: relative;
+	left: 25px;
+	font-size: 20px;
+	color: black;
 }
 
 @media(max-width: 1200px){
