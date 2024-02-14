@@ -5,16 +5,15 @@ declare(strict_types=1);
 namespace App;
 
 require_once("src/Utils/debug.php");
-require_once("src/View.php");
+require_once("src/Controller.php");
 
-const DEAFULT_ACTION = 'login';
+$request = [
+	'get' => $_GET,
+	'post' => $_POST
+];
 
+(new Controller($request))->run();
 
-$action = $_GET['action'] ?? DEAFULT_ACTION;
+// $controller = new Controller($request);
+// $controller->run();
 
-$view = new View();
-
-$viewParams = [];
-$viewParams['userId'] = 1;
-
-$view->render($action, $viewParams);
