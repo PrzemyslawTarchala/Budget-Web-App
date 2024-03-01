@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace App;
 
-use PDO;
+// use PDO;
+// use Throwable;
+// use App\Exception\AppException;
+use App\Exception\ConfigurationException;
 
+require_once("src/Exception/ConfigurationException.php");
 require_once("Database.php");
 require_once("View.php");
 
@@ -16,8 +20,9 @@ class Controller
 
 	private static array $configuration = [];
 
-	private $request;
+	private Database $database;
 	private View $view;
+	private $request;
 
 	public static function initConfiguration(array $configuration): void
 	{
@@ -26,8 +31,11 @@ class Controller
 
 	public function __construct(array $request)
 	{
-		$db = new Database(self::$configuration['db']); 
+		if(empty(self::$configuration['db'])){
+			throw new ConfigurationException("Configuration error");
+		}
 
+		$this->database = new Database(self::$configuration['db']); 
 		$this->request = $request;
 		$this->view = new View();
 	}
@@ -48,11 +56,26 @@ class Controller
 					];
 					dump($data);
 				}
-
 				break;
 			
 			case 'register':
 				$page = 'register';
+				
+				$registrationData = $this->getRequestPost();
+				if(!empty($registrationData)) {
+					$registrationData = [
+						'email' => $registrationData['email'],
+						'username' => $registrationData['username'],
+						'password' => $registrationData['password'],
+						'confirmPassword' => $registrationData['confirmPassword']
+					];
+					if ($registrationData['password'] === $registrationData['confirmPassword']){
+						$this->database->registerUser($registrationData);	
+						header('Location: /');
+					} else {
+						echo "Różne hasła";
+					}
+				}
 				break;
 
 			case 'recover-password':

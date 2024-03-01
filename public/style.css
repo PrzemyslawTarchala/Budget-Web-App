@@ -309,7 +309,7 @@ body.dark .switch::before{
 }
 
 .window{
-	height: 400px;
+	height: 430px;
 	width: 400px;
 	padding: 20px 10px;
 	background: var(--sidebar-color);
