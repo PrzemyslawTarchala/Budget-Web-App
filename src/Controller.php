@@ -42,19 +42,17 @@ class Controller
 
 	public function run(): void 
 	{
-		$viewParams = [];
-		
 		switch ($this->action()) {
 			case 'login':
 				$page = 'login';
 
-				$data = $this->getRequestPost();
-				if(!empty($data)) {
-					$data = [
-						'email' => $data['email'],
-						'password' => $data['password']
+				$loginData = $this->getRequestPost();
+				if(!empty($loginData)) {
+					$loginData = [
+						'username' => $loginData['username'],
+						'password' => $loginData['password']
 					];
-					dump($data);
+				$this->database->loginUser($loginData);
 				}
 				break;
 			
@@ -71,7 +69,7 @@ class Controller
 					];
 					if ($registrationData['password'] === $registrationData['confirmPassword']){
 						$this->database->registerUser($registrationData);	
-						header('Location: /');
+						header('Location: /'); 
 					} else {
 						echo "Różne hasła";
 					}
@@ -86,7 +84,7 @@ class Controller
 				$page = 'login';
 		}
 
-		$this->view->render($page, $viewParams);
+		$this->view->render($page);
 	}
 
 	private function action(): string 

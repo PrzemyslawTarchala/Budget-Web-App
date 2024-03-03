@@ -2,8 +2,8 @@
 
 	<form action="/?action=login" method="post" class="login-form">
 
-		<label for="email"></label>
-		<input type="text" id="email" name="email" placeholder="email"></br>
+		<label for="username"></label>
+		<input type="text" id="username" name="username" placeholder="username"></br>
 		<label for="password"></label>
 		<input type="password" id="password" name="password" placeholder="password">
 		

@@ -27,6 +27,33 @@ class Database
 		}
 	}
 
+	public function loginUser(array $loginData): int
+	{
+		try {
+			$username = $loginData['username'];
+			$password = $loginData['password'];
+
+			$query = "SELECT users.id FROM users WHERE username = :username AND password = :password";
+
+			$stmt = $this->conn->prepare($query);
+			$stmt->bindParam(':username', $username);
+			$stmt->bindParam(':password', $password);
+			$stmt->execute();
+
+			$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+			if ($result) {
+					$userId = $result['id'];
+			} else {
+					$userId = null;
+			}
+			return (int)$userId;
+
+		} catch (PDOException $e) {
+			throw new StorageException('Connection error');
+		}
+	}
+
 	public function registerUser(array $registrationData): void
 	{
 		try {
