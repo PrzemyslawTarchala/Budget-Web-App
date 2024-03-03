@@ -309,7 +309,7 @@ body.dark .switch::before{
 }
 
 .window{
-	height: 400px;
+	height: 430px;
 	width: 400px;
 	padding: 20px 10px;
 	background: var(--sidebar-color);
@@ -360,18 +360,32 @@ body.dark .switch::before{
 }
 
 .window .middle-section .remeber{
-	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .window .middle-section .remeber input{
 	cursor: pointer;
+	height: 22px;
+	width: 22px;
+
 }
 
 .window .middle-section .button{
 	width: 100%;
+	margin-top: 5px;
 }
 
 .window .middle-section button{
+	height: 40px;
+	width: 70%;
+	border: 1px solid darkgrey;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.window .middle-section .button input{
 	height: 40px;
 	width: 70%;
 	border: 1px solid darkgrey;

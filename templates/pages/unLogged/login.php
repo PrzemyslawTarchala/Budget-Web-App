@@ -1,69 +1,40 @@
-<!-- Login panel -->
+<div class="middle-section">
 
-	<div class="middle-section">
-		<form action="" class="login-form">
-			<label for="email"></label>
-			<input type="text" id="email" name="email" placeholder="Login"></br>
-			<label for="password"></label>
-			<input type="password" id="password" name="password" placeholder="password">
-		</form>
+	<form action="/?action=login" method="post" class="login-form">
 
+		<label for="username"></label>
+		<input type="text" id="username" name="username" placeholder="username"></br>
+		<label for="password"></label>
+		<input type="password" id="password" name="password" placeholder="password">
+		
 		<div class="remeber">
-			<input type="checkbox"><label for=""> Remeber me</label>
+			<input type="checkbox"><label for="">Remeber me</label>
 		</div>
 
 		<div class="button">
-			<button type="button">Log in</button>
+			<button type="submit" >Sign in</button>
 		</div>
+
+	</form>
+</div>
+
+<div class="bottom-section">
+	<div class="reset-register">
+		<span>Forgot password? <a href="/?action=recover-password">Reset password</a></span>
+		<span>No account? <a href="/?action=register">Register</a></span>
+	</div>	
+</div>
+
+
+<!-- 
+	<div class="remeber">
+		<input type="checkbox"><label for=""> Remeber me</label>
 	</div>
 
-	<div class="bottom-section">
-		<div class="reset-register">
-			<span>Forgot password? <a href="/?action=recover-password">Reset password</a></span>
-			<span>No account? <a href="/?action=register">Register</a></span>
-		</div>	
-	</div>
+	<div class="button">
+		<input type="submit" value="submit">Sign in</input>
+	</div> -->
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Budget App</title>
-		<link rel="stylesheet" href="public/style.css">
-	</head>
-
- 
-	<body>
-		<section class="main-window">
-			
-			<div class="login-window">
-				<div class="logo">
-					<img src="/img/logo.png" alt="">
-					<h2>Budget App</h2>
-				</div>
-				<form action="" class="login-form">
-					<label for="email"></label>
-					<input type="text" id="email" name="email" placeholder="Login"></br>
-					<label for="password"></label>
-					<input type="password" id="password" name="password" placeholder="password">
-				</form>
-
-				<div class="remeber">
-					<input type="checkbox"><label for=""> Remeber me</label>
-				</div>
-
-				<div class="button">
-					<button type="button">Log in</button>
-				</div>
-
-				<div class="reset-register">
-					<span>Forgot password? <a href="">Reset password</a></span>
-					<span>No account? <a href="/?action=register">Register</a></span>
-				</div>
-				
-			</div>
-		</section>
-	</body>
-</html> -->
+	<!-- <div class="button">
+		<button type="submit" value="submit">Sign in</button>
+	</div> -->
